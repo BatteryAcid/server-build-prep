@@ -21,6 +21,8 @@ if (path.basename(process.cwd()) != "enherjar-synergy-v2-full") {
    process.exit(1);
 }
 
+// NOTE: do not add Assets/SteamWorks Test 
+
 const directoriesToExcludeFromServerBuild = [
    "./Assets/Sci_Fi_Armors_7/Textures",
    "./Assets/Resources/Stats Board Video Effects",
@@ -35,7 +37,14 @@ const directoriesToExcludeFromServerBuild = [
    "./Assets/ScifiGrenadeLauncherGRL45/Textures",
    "./Assets/textures",
    "./Assets/Sci fi Environment/Textures",
-   "./Assets/ScifiGrenadeLauncherGRL45/Textures"
+   "./Assets/KriptoFX/Realistic Effects Pack v4/Effects/Textures",
+   "./Assets/QFX/Sci-Fi VFX/Resources/Textures",
+   "./Assets/Fantasy staffs PACK01/Textures",
+   "./Assets/DreamForestTree/Textures",
+   "./Assets/Opsive/DeathmatchAIKit/Demo/Textures",
+   "./Assets/Skybox Pack 8k UHD/Textures",
+   "./Assets/Resources/Sprites",
+   "./Assets/Fonts"
 ];
 
 //------------------------------------------------------------------------
