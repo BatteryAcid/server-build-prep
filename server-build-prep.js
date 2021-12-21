@@ -1,7 +1,7 @@
 /*
  * Requires npm to be installed.
- * To run, first move the server-build-prep project next to the enherjar-synergy-v2-full directory.
- * Then, open a terminal window (or CMD prompt), and navigate to the top level of the enherjar-synergy-v2-full project directory.js
+ * To run, first move the server-build-prep project next to the target project directory.
+ * Then, open a terminal window (or CMD prompt), and navigate to the top level of the target project directory.js
  *
  * node ../server-build-prep/server-build-prep.js
  */
@@ -15,36 +15,14 @@ const path = require('path');
 const TILDA = "~";
 const META_EXT = ".meta";
 
-if (path.basename(process.cwd()) != "enherjar-synergy-v2-full") {
+if (path.basename(process.cwd()) != "TOP_LEVEL_DIR_OF_YOUR_PROJECT") {
    console.log("current directory: " + path.basename(process.cwd()));
-   console.log("Please run script from top level of enherjar-synergy-v2-full");
+   console.log("Please run script from top level of TOP_LEVEL_DIR_OF_YOUR_PROJECT");
    process.exit(1);
 }
 
-// NOTE: do not add Assets/SteamWorks Test 
-
 const directoriesToExcludeFromServerBuild = [
-   "./Assets/Sci_Fi_Armors_7/Textures",
-   "./Assets/Resources/Stats Board Video Effects",
-   "./Assets/beffio/The Hunt/Content/Textures/Model Textures",
-   "./Assets/ASTROFISH_GAMES/MEDIEVAL_SERIES/MEDIEVAL_VILLAGE_HD/_Assets",
-   "./Assets/Resources/Songs",
-   "./Assets/Sci-fi Weapons Arsenal/Textures",
-   "./Assets/Opsive/UltimateCharacterController/Demo/Animations/Items",
-   "./Assets/Opsive/UltimateCharacterController/Demo/Animations/Abilities",
-   "./Assets/Ancient Alien/Ancient Alien Environment/Content/3D/Objects",
-   "./Assets/Sci_Fi_Armors_7/Animations",
-   "./Assets/ScifiGrenadeLauncherGRL45/Textures",
-   "./Assets/textures",
-   "./Assets/Sci fi Environment/Textures",
-   "./Assets/KriptoFX/Realistic Effects Pack v4/Effects/Textures",
-   "./Assets/QFX/Sci-Fi VFX/Resources/Textures",
-   "./Assets/Fantasy staffs PACK01/Textures",
-   "./Assets/DreamForestTree/Textures",
-   "./Assets/Opsive/DeathmatchAIKit/Demo/Textures",
-   "./Assets/Skybox Pack 8k UHD/Textures",
-   "./Assets/Resources/Sprites",
-   "./Assets/Fonts"
+   "./Assets/SomeFolderToExclude"
 ];
 
 //------------------------------------------------------------------------
